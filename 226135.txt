@@ -1,0 +1,102 @@
+4. 
+cd C:\Users\AnaMarija\Desktop\finki\четврт семестар\si\lab1
+mkdir SI_2024_lab1_226135   (креирање на обичен фолдер)
+cd SI_2024_lab1_226135   (влегување во него)
+git init         (го иницијализираме git во него)
+
+5. 
+git remote add origin  git@github.com:anamarijakraus/SI_2024_lab1_226135.git
+(поврзување на локалниот репозиториум со оддалечениот)
+
+6. 
+notepad README.md  	(креирање на документот и запишување име презиме и индекс во него)
+git add README.md	 (додавање во stage фаза)
+git commit -m “Initial commit”	(правење commit  со порака)
+
+7. 
+notepad SILab1Main.java 	(креирање на првиот документ и копирање на содржината  во него)
+notepad SILab1_1.java 		(креирање на вториот документ и копирање на содржината  во него)
+notepad SILab1_2.java  		(креирање на третиот документ и копирање на содржината  во него)
+git add –all				(додавање на трите документи во stage фаза)
+git commit -m “Add starter code” 	(правење commit  со порака)
+
+
+8. 
+git push origin master  	(синхронизирање, нема конфликти)
+
+9.  
+git branch bug1		(креирање на нова гранка, која излегува од master)
+git branch bug2		(креирање на нова гранка, која излегува од master)
+
+10.
+git checkout bug1 	(преместување)
+
+11.
+notepad SILab1_1.java		(влегување во датотеката и поправање грешката)
+git commit -a -m "Fix wrong condition in filterOddLengthStrings"       (правење аdd и commit  со порака)
+
+12. 
+git checkout bug2	(преместување)
+
+13.
+notepad SILab1_2.java 		(влегување во датотеката и поправање грешката)
+git commit -a -m "Fix wrong condition in makeBigStringFrom"  	(правење аdd и commit  со порака)
+
+14.
+ git checkout bug1 	(преместување)
+
+15. 
+notepad SILab1Main.java	(влегување во датотеката и додавање на повик до функција)
+git commit -a -m "Call method filterOddLengthStrings in main class"	(правење аdd и commit  со порака)
+
+16.
+git checkout bug2 	(преместување)
+
+17. 
+notepad SILab1Main.java	(влегување во датотеката и додавање на повик до функција)
+git commit -a -m "Call method makeBigStringFrom in main class" 	(правење аdd и commit  со порака)
+
+18.
+git push --all origin (сите гранки ( заедно со и master, каде немаме промени) наеднаш ги синхронизираме)
+(доколку сакавме само на гранките каде што имам промени  git push origin bug1 и потоа git push origin bug2)
+
+19. 
+git checkout master 	(преместување)
+
+20.
+git merge bug1  (спојување)
+
+21. 
+git push --all origin      (синхронизација)
+
+22. 
+git checkout bug2   (префрлање на bug2 )
+
+23.
+git rebase master    	(при што се појави конфликт CONFLICT (content): Merge conflict in SILab1Main.java)
+notepad SILab1Main.java    	(за да го поправам конфликтот, односно го решив така што и двете верзии ќе се прикажат)
+git add SILab1Main.java		(за да се додаде датотеката со промената)
+git rebase –continue 		(да продолжи спојувањето)
+
+24.
+git checkout master (префрлање на master)
+
+25.
+git merge bug2		(спојување)
+
+26.
+git push --all origin            (настана конфликт со bug2:  	 ! [rejected]        bug2 -> bug2 (non-fast-forward)
+   error: failed to push some refs to 'github.com:anamarijakraus/SI_2024_lab1_226135.git')
+
+
+27. 
+git push --force origin bug2	(успешно е синхронизирана и гранката bug2)
+
+28.
+git log > logs.txt 	(креирање на документ logs.txt и полнење со досегашните логови)
+notepad 226135.txt 	(креирање и полнење на датотеката со досегашна документација)
+git add --all 		(додавање на сите датотеки)
+git commit -m  “Final commit”     (правење commit  со порака) 
+
+29. git push --all origin 	(синхронизирање на сите гранки)
+
